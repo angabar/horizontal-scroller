@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Lit laboratory</title>
+        <script src="../node_modules/lit/polyfill-support.js"></script>
+        <script type="module" src="../build/index.js"></script>
+        <style>
+            .main-container {
+                width: 450px;
+                background-color: orange;
+                overflow-x: scroll;
+                white-space: nowrap;
+            }
+
+            .element {
+                width: 200px;
+                height: 200px;
+                background-color: rebeccapurple;
+                border-radius: 8px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <horizontal-scroller
+            id="my-component"
+            sensibility="100"
+            inverted
+            anchor="horizontal-scroller"
+        >
+            <div class="main-container" id="horizontal-scroller">
+                <div class="element">Element 1</div>
+                <div class="element">Element 2</div>
+                <div class="element">Element 3</div>
+                <div class="element">Element 4</div>
+                <div class="element">Element 5</div>
+            </div>
+        </horizontal-scroller>
+        <horizontal-scroller
+            id="my-component-inverted"
+            sensibility="100"
+            anchor="horizontal-scroller-inverted"
+        >
+            <div class="main-container" id="horizontal-scroller-inverted">
+                <div class="element">Element 1</div>
+                <div class="element">Element 2</div>
+                <div class="element">Element 3</div>
+                <div class="element">Element 4</div>
+                <div class="element">Element 5</div>
+            </div>
+        </horizontal-scroller>
+        <button id="move-scroll-button">Move scroll</button>
+        <script>
+            const horizontalScroller = document.getElementById("my-component-inverted");
+            const moveButton = document.getElementById("move-scroll-button");
+
+            moveButton.addEventListener("click", () => {
+                horizontalScroller.goToLeftLimit();
+                console.log("hori__ ", horizontalScroller._handleScroll);
+            });
+        </script>
+    </body>
+</html>

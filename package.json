@@ -1,0 +1,30 @@
+{
+    "name": "@angabar21/horizontal-scroller",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "web-dev-server",
+        "build": "npx tsc",
+        "build:watch": "npx tsc --watch",
+        "compile": "npx rollup -c",
+        "publish:patch": "npm run compile && npm version patch && cp package.json ./dist && cd ./dist && npm publish",
+        "publish:minor": "npm run compile && npm version minor && cp package.json ./dist && cd ./dist && npm publish",
+        "publish:major": "npm run compile && npm version major && cp package.json ./dist && cd ./dist && npm publish"
+    },
+    "author": "Enric Cebolla Cerda",
+    "license": "ISC",
+    "dependencies": {
+        "lit": "^2.0.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@web/dev-server": "^0.1.28",
+        "@web/dev-server-esbuild": "^0.2.16",
+        "rollup": "^2.60.1",
+        "typescript": "^4.5.2"
+    }
+}
