@@ -1,4 +1,4 @@
-# @angabar21/horizontal-scroller
+# @angabar21/horizontal-scroller ![npm](https://img.shields.io/npm/v/npm)
 
 `horizontal-scroller` is a web component made with Lit to provides a horizontal scroll on a HTML containers.
 
