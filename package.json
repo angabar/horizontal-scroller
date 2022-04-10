@@ -9,9 +9,9 @@
         "build": "npx tsc",
         "build:watch": "npx tsc --watch",
         "compile": "npx rollup -c",
-        "publish:patch": "npm run compile && npm version patch && cp package.json ./dist && cd ./dist && npm publish",
-        "publish:minor": "npm run compile && npm version minor && cp package.json ./dist && cd ./dist && npm publish",
-        "publish:major": "npm run compile && npm version major && cp package.json ./dist && cd ./dist && npm publish"
+        "publish:patch": "npm run compile && npm version patch && cp package.json README.md ./dist && cd ./dist && npm publish",
+        "publish:minor": "npm run compile && npm version minor && cp package.json README.md ./dist && cd ./dist && npm publish",
+        "publish:major": "npm run compile && npm version major && cp package.json README.md ./dist && cd ./dist && npm publish"
     },
     "author": "Enric Cebolla Cerda",
     "license": "ISC",
