@@ -16,7 +16,7 @@ The only thing you need to do is add an `anchor` property to the component with 
 
 ### DOM
 
-```
+```html
 <horizontal-scroller
     anchor="my-component"
 >
@@ -32,15 +32,49 @@ The only thing you need to do is add an `anchor` property to the component with 
 
 ### React
 
-Coming soon
+```jsx
+import "@angabar21/horizontal-scroller";
+
+function HorizontalScrollExample() {
+    return (
+        <horizontal-scroller anchor="horizontal-scroller">
+            <div className="main-container" id="horizontal-scroller">
+                <div className="element">Element 1</div>
+                <div className="element">Element 2</div>
+                <div className="element">Element 3</div>
+                <div className="element">Element 4</div>
+                <div className="element">Element 5</div>
+            </div>
+        </horizontal-scroller>
+    );
+}
+
+export default HorizontalScrollExample;
+```
 
 ### Vue
 
-Coming soon
+```javascript
+<template>
+    <horizontal-scroller anchor="horizontal-scroller">
+        <div class="main-container" id="horizontal-scroller">
+            <div class="element">Element 1</div>
+            <div class="element">Element 2</div>
+            <div class="element">Element 3</div>
+            <div class="element">Element 4</div>
+            <div class="element">Element 5</div>
+        </div>
+    </horizontal-scroller>
+</template>
 
-### Angular
+<script>
+import "@angabar21/horizontal-scroller";
 
-Coming soon
+export default {
+    name: "App",
+};
+</script>
+```
 
 ## Props and events
 
@@ -50,7 +84,7 @@ The value to link to the container.
 
 **Example**
 
-```
+```html
 <horizontal-scroller
     anchor="my-component"
 >
@@ -66,7 +100,7 @@ The speed of the scroll in pixels per wheel.
 
 **Example**
 
-```
+```html
 <horizontal-scroller
     anchor="my-component"
     sensibility="100"
@@ -83,7 +117,7 @@ By default when you wheel to top the component scrolls to right and when you whe
 
 **Example**
 
-```
+```html
 <horizontal-scroller
     anchor="my-component"
     inverted
@@ -100,7 +134,7 @@ Moves the container to the given value in pixels.
 
 **Example**
 
-```
+```html
 <horizontal-scroller
     id="my-component"
 >
@@ -117,7 +151,7 @@ Moves the container to the limit on left side.
 
 **Example**
 
-```
+```html
 <horizontal-scroller
     id="my-component"
 >
@@ -134,7 +168,7 @@ Moves the container to the limit on right side.
 
 **Example**
 
-```
+```html
 <horizontal-scroller
     id="my-component"
 >
